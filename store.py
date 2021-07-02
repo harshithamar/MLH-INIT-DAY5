@@ -20,9 +20,6 @@ def store():
         p_len=int(input("Please enter what length you would like your password to be: "))
         password=generator(p_len)
         print("Your password is: "+str(password))
-    encrypt_q=input("Would you like to encrypt your password? ")
-    if encrypt_q=='Y':
-        password=encryption(password)
         
     new_store=platform+" "+email+" "+username+" "+password+"\n"
     f1.write(new_store)

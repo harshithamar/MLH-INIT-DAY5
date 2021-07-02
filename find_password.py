@@ -45,6 +45,6 @@ def access():
             print("Account: "+str(data[0]))
             print("Email id: "+str(data[1]))
             print("Username: "+str(data[2]))
-            print("Password: "+str(decryption(data[3])))
+            print("Password: "+str(data[3]))
         
     
