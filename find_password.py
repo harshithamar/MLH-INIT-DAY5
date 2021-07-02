@@ -7,6 +7,7 @@ Created on Fri Jul  2 18:59:53 2021
 
 #this file will help access passwords
 import numpy as np
+from encryption import decryption
 
 def access():
     f2=open("passwords.txt","r")
@@ -44,6 +45,6 @@ def access():
             print("Account: "+str(data[0]))
             print("Email id: "+str(data[1]))
             print("Username: "+str(data[2]))
-            print("Password: "+str(data[3]))
+            print("Password: "+str(decryption(data[3])))
         
     

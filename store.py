@@ -6,6 +6,8 @@ Created on Fri Jul  2 18:48:41 2021
 """
 import pclass as p
 from password_generator import generator
+from encryption import encryption
+from encryption import decryption
 
 #function that stores passwords
 def store():
@@ -18,7 +20,10 @@ def store():
         p_len=int(input("Please enter what length you would like your password to be: "))
         password=generator(p_len)
         print("Your password is: "+str(password))
-    #encrypt the password
+    encrypt_q=input("Would you like to encrypt your password? ")
+    if encrypt_q=='Y':
+        password=encryption(password)
+        
     new_store=platform+" "+email+" "+username+" "+password+"\n"
     f1.write(new_store)
     print("Password stored!")
