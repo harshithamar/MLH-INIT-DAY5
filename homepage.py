@@ -4,6 +4,8 @@ Created on Fri Jul  2 18:36:21 2021
 
 @author: bshpa
 """
+import pclass as p
+from store import store as store
 
 #homepage for user to picks options
 
@@ -20,6 +22,7 @@ def main():
             break
         if user_choice=='c':
             #store password for a new account
+            store()
             break
         else:
             print("Invalid input, please try again")
