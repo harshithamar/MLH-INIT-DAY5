@@ -6,6 +6,7 @@ Created on Fri Jul  2 18:36:21 2021
 """
 import pclass as p
 from store import store as store
+from find_password import access
 
 #homepage for user to picks options
 
@@ -19,6 +20,7 @@ def main():
             break
         if user_choice=='b':
             #get password for an account
+            access()
             break
         if user_choice=='c':
             #store password for a new account

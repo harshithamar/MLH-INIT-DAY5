@@ -47,4 +47,3 @@ def access():
             print("Password: "+str(data[3]))
         
     
-access()
