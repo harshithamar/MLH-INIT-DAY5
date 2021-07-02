@@ -1,9 +1,9 @@
-from secret import get_secret_key
+from .secrets import key
 from menu import menu, create, find, find_accounts
 
-secret = get_secret_key()
+secret = key()
 
-if passw == secret:
+if passw == secrets:
     print('You\ are in')
 
 else:
