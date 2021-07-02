@@ -1,9 +1,13 @@
+import string
 import random
 
 uppercase_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 lowercase_letters = uppercase_letters.lower()
 digits = "0123456789"
 symbols = "!@#$%^&*()<>{}?+_"
+
+x = string.uppercase_letters + string.lowercase_letters + string.digits + string.symbols
+
 
 upper, lower, nums, symb = True, True, True, True
 
@@ -20,9 +24,8 @@ if nums:
 if symb:
     all = symbols
 
-length = 20
 amount = 15
 
 for x in range(amount):
-    password = "".join(random.sample(all, length))
+    password = ''.join([random.choice(x) for _ in range(amount)])    
     print(password)
