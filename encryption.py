@@ -18,9 +18,13 @@ symbols = "!@#$%^&*()<>{}?+_"
 x = uppercase_letters + lowercase_letters + digits + symbols
 y = ''
 
-for i in range(len(x)):
-    y=y+random.choice(x)
-    
+
+index=list(np.random.randint(0,len(x),len(x)))
+for i in range(len(x)-1):
+    choice=x[index[i]]
+    y=y+str(choice)
+    del index[i]
+
 f1.write(str(y)+"\n"+str(x))
 f1.close()
     
@@ -47,12 +51,15 @@ def decryption(decrypt):
         key=key+[line]
     scramble=str(key[0])
     normal=str(key[1])
-    for i in range(len(password)):
-        for j in range(len(scramble)):
+    for i in range(len(decrypt)):
+        for j in range(len(normal)):
             if decrypt[i]==scramble[j]:
                 decrypted=decrypted+str(normal[j])
     file2.close()
     return decrypted
+
+
+print(decryption('password'))
     
 
 
