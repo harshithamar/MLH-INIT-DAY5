@@ -7,6 +7,7 @@ Created on Fri Jul  2 18:36:21 2021
 import pclass as p
 from store import store as store
 from find_password import access
+from password_generator import generator
 
 #homepage for user to picks options
 
@@ -17,6 +18,9 @@ def main():
         if user_choice=='a':
             #generate password
             #use password for a new account
+            length=int(input("Please enter what length you'd like your password to be: "))
+            pwrd=generator(length)
+            print("Here is your new password: "+pwrd)
             break
         if user_choice=='b':
             #get password for an account
